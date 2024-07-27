@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-
         body {
             font-family: Arial, sans-serif;
         }
 
         .modal {
-			margin-left: 300px;
-            display: none; 
-            position: fixed; 
-            z-index: 1; 
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
             left: 0;
             top: 0;
-            width: 50%; 
-            height: 100%; 
-            overflow: auto; 
+            width: 100%; /* Full width on mobile */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
         }
 
         .modal-content {
             background-color: #fefefe;
-            margin: 15% auto; 
+            margin: 10% auto; /* Center the modal */
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 80%; /* Default width */
+            max-width: 500px; /* Max width for larger screens */
             text-align: center;
         }
 
@@ -46,12 +46,14 @@
             text-decoration: none;
             cursor: pointer;
         }
-		@media screen and (max-width: 600px) {
-        .modal-content {
-            width: 90%; 
-            margin: 20% auto; 
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 600px) {
+            .modal-content {
+                width: 90%; /* Full width on mobile */
+                margin: 20% auto; /* Center the modal */
+            }
         }
-    }
     </style>
 </head>
 <body class="is-preload">
@@ -162,19 +164,13 @@
                 <script src="assets/js/util.js"></script>
                 <script src="assets/js/main.js"></script>
 
-               
+                <!-- Inline Script for Modal -->
                 <script>
-                  
                     var modal = document.getElementById("myModal");
-
-                   
                     var btn = document.getElementById("sendMessageButton");
-
-                  
                     var span = document.getElementsByClassName("close")[0];
 
-                   
-                    btn.onclick = function(event) {
+					btn.onclick = function(event) {
                         event.preventDefault(); 
                         modal.style.display = "block";
                     }
